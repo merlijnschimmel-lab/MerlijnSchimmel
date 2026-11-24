@@ -21,3 +21,51 @@
 
 /* Revised hero, identity and connected future roadmap */
 .hero-logo{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:25px;text-align:center}.hero-logo svg{width:85%;max-width:370px;height:auto;overflow:visible}.hero-logo svg path{fill:none;stroke:white;stroke-width:2.6}.hero-logo svg .goldstroke{stroke:var(--gold)}.hero-logo strong{font-size:clamp(.8rem,1.4vw,1.2rem);letter-spacing:.17em}.identity-evaluation{margin-top:50px}.roadmap{margin-top:40px;--connector:var(--blue);--branch-gap:24px}.roadmap-start{background:var(--navy);color:white;text-align:center;padding:25px 24px;border-radius:10px;width:fit-content;max-width:100%;margin:0 auto}.roadmap-start span{color:var(--gold);font-size:.72rem;font-weight:bold;letter-spacing:.15em}.roadmap-start h3{font-family:Georgia,serif;font-weight:400;font-size:1.65em;margin:8px 0 0}.roadmap .future-grid{margin:0;gap:var(--branch-gap)}.roadmap .future-grid article{border:1px solid var(--blue);border-top:3px solid var(--blue);border-radius:8px;text-align:center}.roadmap .future-grid p{margin-bottom:0}.roadmap .shared{margin:0;border-radius:10px}.roadmap-branch{height:65px;position:relative;background:linear-gradient(var(--connector),var(--connector)) center top/2px 50% no-repeat}.roadmap-branch::after{content:"";position:absolute;top:50%;bottom:0;left:calc(25% - var(--branch-gap)/4);right:calc(25% - var(--branch-gap)/4);border:2px solid var(--connector);border-bottom:0}.roadmap-branch.merge{transform:rotate(180deg)}.roadmap-branch.merge::after{left:calc(25% - var(--branch-gap)/4);right:calc(25% - var(--branch-gap)/4)}@media(max-width:550px){.hero-logo svg{max-width:180px}.hero-logo{gap:14px}.roadmap .future-grid{grid-template-columns:repeat(2,minmax(0,1fr));--branch-gap:12px;gap:12px}.roadmap{--branch-gap:12px}.roadmap .future-grid article{padding:14px 10px;overflow-wrap:anywhere}.roadmap .future-grid h3{font-size:1.25em}.roadmap .future-grid p{font-size:.9em}.roadmap-branch{height:40px}}@media print{.roadmap-start{background:white;color:var(--navy);border:1px solid var(--navy)}.roadmap-start span,.shared span{color:#79531e}.roadmap{break-inside:avoid}}
+/* Positioning map with explanatory text */
+
+.map-wrap {
+  margin: 60px auto 0;
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(25px, 5vw, 70px);
+  align-items: center;
+  text-align: left;
+}
+
+.map-description h3 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.map-description p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.map-visual {
+  width: 100%;
+}
+
+.map-visual .map {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+
+.map-visual .note {
+  margin-top: 15px;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+/* Mobile layout */
+
+@media (max-width: 900px) {
+  .map-wrap {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
